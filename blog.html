@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <nav
+        class="fixed w-full flex items-center justify-between flex-wrap bg-white py-2 lg:px-12 shadow border-solid border-t-2 border-blue-700">
+        <div class="flex lg:w-auto w-full justify-between lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0">
+            <div class="flex items-center flex-shrink-0 text-gray-800 mr-16">
+                <span class=" tracking-tight">
+                    <img src="https://1000logos.net/wp-content/uploads/2020/08/Blogger-Logo.png" alt="" width="100">
+                </span>
+            </div>
+            <div class="block lg:hidden ">
+                <button
+                    id="nav"
+                    class="flex items-center px-3 py-2 my-3 border-2 rounded text-blue-700 border-blue-700 hover:text-blue-700 hover:border-blue-700">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    
+        <div class="menu w-full flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8" id="mobileMenu">
+            <div class="text-md font-bold text-gray-700 lg:flex-grow">
+                <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 px-4 py-2 hover:border-b-2 mr-2">
+                    Home
+                </a>
+                <a href="blog.html" class=" block mt-4 lg:inline-block lg:mt-0  px-4 py-2  hover:border-b-2 mr-2">
+                    Blog
+                </a>
+                <a href="about.html" class="block mt-4 lg:inline-block lg:mt-0  px-4 py-2  hover:border-b-2 mr-2">
+                    About
+                </a>
+                <a href="contact.html" class="block mt-4 lg:inline-block lg:mt-0  px-4 py-2 hover:border-b-2 mr-2">
+                    Contact
+                </a>
+            </div>
+            <!-- This is an example component -->
+            <div class="relative mx-auto text-gray-600 lg:block hidden">
+                <input
+                    class=" border-b-2 border-gray-300 bg-transparent h-10 pl-2 pr-8 text-sm focus:outline-none"
+                    type="search" name="search" placeholder="Search">
+                <button type="submit" class="absolute right-0 top-0 mt-3 mr-2">
+                    <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                        version="1.1" id="Capa_1" x="0px" y="0px"
+                        viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;"
+                        xml:space="preserve"
+                        width="512px" height="512px">
+                <path
+                    d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"/>
+            </svg>
+                </button>
+            </div>
+            <div class="flex mx-6 ">
+                <a href="#" class="block text-md px-4 py-1 rounded-full text-gray-500 ml-1 font-bold hover:text-gray-600 mt-4 hover:bg-gray-200 lg:mt-0"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class=" block text-md px-4  ml-1 py-1 rounded-full text-gray-500 font-bold hover:text-gray-600 mt-4 hover:bg-gray-200 lg:mt-0"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class=" block text-md px-4  ml-1 py-1 rounded-full text-gray-500 font-bold hover:text-gray-600 mt-4 hover:bg-gray-200 lg:mt-0"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class=" block text-md px-4  ml-1 py-1 rounded-full text-gray-500 font-bold hover:text-gray-600 mt-4 hover:bg-gray-200 lg:mt-0"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+
+    <section class="bg-center lg:max-h-48 md:max-h-52 bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
+        <div class="px-4 mx-auto max-w-screen-xl text-center lg:py-28 md:py-32">
+            <h1 class=" text-4xl font-extrabold tracking-tight leading-none text-white md:text-4xl lg:text-4xl">My Life , My Blogs</h1>
+        </div>
+    </section>
+    <!-- blog card -->
+    <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+      <!--Card 1-->
+      <div class=" mx-auto w-full max-w-sm pt-6">
+        <div >
+        <div class="rounded">
+            <div class=" flex h-60 rounded-lg">
+            <div class="w-full">
+                <img src="images/img1.webp" alt="" />
+            </div>
+            </div>
+            <div class=" p-3">
+            <div class="mt-4 grid grid-cols-1">
+                <div class="flex items-center">
+                <div class=" text-center">
+                    <h2 class=" text-base font-medium text-gray-800 md:text-lg" title="">WHY VISIT DA NANG IN CENTRAL VIETNAM</h2>
+                    <p class="mt-2 line-clamp-1 text-sm text-gray-800" title="">by Parnashree Devi | Jul 13, 2023</p>
+                </div>
+                </div>
+            </div>
+            <p class="mt-2 border-t overflow-hidden max-h-28 border-gray-200 pt-3" id="card-content">Planning a trip to Vietnam? Visit Da Nang’s Coastal Charms. Sun, Sand, and Cultural Delights in Central Vietnam should be on your list.
+                Da Nang is a must-see treasure located in Central Vietnam, encircled by the Eastern Sea’s crystal-clear waters and towering mountains on all sides. This coastal city provides a heady mix with its sun-drenched beaches, breathtaking cultural attractions, and exhilarating activities that appeal to all the senses. This tour of Da
+                 Nang’s tropical attractions reveals an engrossing story of a city caught between tradition and modernization.
+            </p>
+            <span class="read-more-btn font-thin cursor-pointer" onclick="toggleContent()">....Read More</span>
+            <div class="px-6 pt-4 pb-2 border-t border-b">
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-white"><i class="fa-sharp fa-regular fa-eye"></i>&nbsp;1.2k</span>
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-white"><i class="fa-regular fa-comment fa-fade"></i>&nbsp;78</span>
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-white"><i class="fa-regular fa-heart fa-fade"></i>&nbsp;78</span>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+      <!--Card 2-->
+      <div class=" mx-auto w-full max-w-sm pt-6 h-auto">
+        <div >
+        <div class="rounded">
+            <div class=" flex h-60 rounded-lg">
+            <div class="w-full">
+                <img src="images/img2.webp" alt="" />
+            </div>
+            </div>
+            <div class=" p-3">
+            <div class="mt-4 grid grid-cols-1">
+                <div class="flex items-center">
+                <div class="text-center">
+                    <h2 class=" text-base font-medium text-gray-800 md:text-lg uppercase">Join guided group tours</h2>
+                    <p class="mt-2 line-clamp-1 text-sm text-gray-800" >by Parnashree Devi | Jul 6, 2023</p>
+                </div>
+                </div>
+            </div>
+            <p class="mt-2 border-t overflow-hidden max-h-28 border-gray-200 pt-3" id="card-content1">Planning a solo trip? Find out 7 awesome travel tips before traveling solo in Iceland. A handy travel guide.
+                Going solo doesn’t mean putting yourself out there in unfamiliar places or attempting activities unsafely. That’s why guided group tours in Iceland are an option. One scenario is joining a small group for a day tour with a local guide. Exploring ice caves underlines the expertise of a professional guide. Guided tours not only
+                let you meet like-minded travelers, but they also let you tap the knowledge and skills of locals. 
+            </p>
+            <span class="read-more-btn1 font-thin cursor-pointer" onclick="toggleContentone()">....Read More</span>
+            <div class="px-6 pt-4 pb-2 border-t border-b">
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-white"><i class="fa-sharp fa-regular fa-eye"></i>&nbsp;1,234</span>
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-white"><i class="fa-regular fa-comment fa-fade"></i>&nbsp;86</span>
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-white"><i class="fa-regular fa-heart fa-fade"></i>&nbsp;70</span>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+  
+      <!--Card 3-->
+      <div class=" mx-auto w-full max-w-sm pt-6 h-auto">
+        <div >
+        <div class="rounded">
+            <div class=" flex h-60 rounded-lg">
+            <div class="w-full">
+                <img src="images/img3.webp" alt="" />
+            </div>
+            </div>
+            <div class=" p-3">
+            <div class="mt-4 grid grid-cols-1">
+                <div class="flex items-center">
+                <div class=" text-center">
+                    <h2 class=" text-base font-medium text-gray-800 md:text-lg" title="">MY SINGAPORE PASS: ULTIMATE SOLUTION FOR HASSLE-FREE ATTRACTION BOOKINGS</h2>
+                    <p class="mt-2 line-clamp-1 text-sm text-gray-800" title="">by Parnashree Devi | Jun 29, 2023</p>
+                </div>
+                </div>
+            </div>
+            <p class="mt-2 border-t overflow-hidden max-h-28 border-gray-200 pt-3" id="card-content2">Planning to visit attractions in Singapore? Take Singapore Pass which is an ultimate solution for hassle-free attractions bookings.
+                Singapore, the captivating city-state known for its modernity and cultural diversity, 
+                offers a plethora of attractions and experiences for visitors. However, planning your itinerary and organizing entry tickets to various attractions can be a daunting task. That’s where 
+                My Singapore Pass comes to the rescue as the ultimate solution for hassle-free attraction bookings in Singapore.
+            </p>
+            <span class="read-more-btn2 font-thin cursor-pointer" onclick="toggleContenttwo()">....Read More</span>
+            <div class="px-6 pt-4 pb-2 border-t border-b">
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-white"><i class="fa-sharp fa-regular fa-eye"></i>&nbsp;1.5k</span>
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-white"><i class="fa-regular fa-comment fa-fade"></i>&nbsp;98</span>
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-white"><i class="fa-regular fa-heart fa-fade"></i>&nbsp;38</span>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+      <!--Card 4-->
+      <div class=" mx-auto w-full max-w-sm pt-6">
+        <div >
+        <div class="rounded">
+            <div class=" flex  rounded-lg">
+            <div class="w-full">
+                <img src="images/img4.jpg" alt="" class=" w-full"/>
+            </div>
+            </div>
+            <div class=" p-3">
+            <div class="mt-4 grid grid-cols-1">
+                <div class="flex items-center">
+                <div class=" text-center">
+                    <h2 class=" text-base font-medium text-gray-800 md:text-lg" title="">PICTURE PERFECT PICKS: ULTIMATE CAMERA BUYING GUIDE FOR FLAWLESS PHOTOGRAPHY!</h2>
+                    <p class="mt-2 line-clamp-1 text-sm text-gray-800" title="">by Archana Singh | AUGUST 3, 2023</p>
+                </div>
+                </div>
+            </div>
+            <p class="mt-2 border-t overflow-hidden max-h-28 border-gray-200 pt-3" id="card-content3">Ready to level up your photography game? Discover the essential factors for choosing the perfect digital camera – be it a compact point-and-shoot, versatile bridge, powerful DSLR, or innovative mirrorless camera. From autofocus and image stabilization to zoom, Wi-Fi, and Bluetooth connectivity, our comprehensive
+                camera buying guide will help you make the right choice and capture breathtaking shots like a pro!. As a content creator whose livelihood depends on capturing moments, a digital camera is the most crucial arm in my arsenal. 
+                In today’s digital age, capturing life’s precious moments for work and leisure is no longer daunting
+            </p>
+            <span class="read-more-btn3 font-thin cursor-pointer" onclick="toggleContentthree()">....Read More</span>
+            <div class="px-6 pt-4 pb-2 border-t border-b">
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-white"><i class="fa-sharp fa-regular fa-eye"></i>&nbsp;145</span>
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-white"><i class="fa-regular fa-comment fa-fade"></i>&nbsp;45</span>
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-white"><i class="fa-regular fa-heart fa-fade"></i>&nbsp;43</span>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!--Card 5-->
+    <div class=" mx-auto w-full max-w-sm pt-6">
+        <div >
+        <div class="rounded">
+            <div class=" flex rounded-lg">
+            <div class="w-full">
+                <img src="images/img5.webp" alt="" />
+            </div>
+            </div>
+            <div class=" p-3">
+            <div class="mt-4 grid grid-cols-1">
+                <div class="flex items-center">
+                <div class=" text-center">
+                    <h2 class=" text-base font-medium text-gray-800 md:text-lg" title="">A Photo Story from Gokarna</h2>
+                    <p class="mt-2 line-clamp-1 text-sm text-gray-800" title="">by shubham mansingka | May 31, 2023</p>
+                </div>
+                </div>
+            </div>
+            <p class="mt-2 border-t overflow-hidden max-h-28 border-gray-200 pt-3" id="card-content4">It was 2015 and I had randomly booked myself on a Jaipur to Ernakulam train and after spending a week or so enjoying the
+                 charms of monsoon in Goa decided to catch a bus to Karwar. From Panjim bus stand, it was surprisingly easy to find a KSRTC bus and it hardly took 2 and a half hours to reach Karwar bus stand. After hanging around in Karwar, observing the flower sellers and enjoying a
+                 quick bite at one of the numerous Iyengar bakeries in town, it was time to catch a bus from Karwar to Gokarna.
+            </p>
+            <span class="read-more-btn4 font-thin cursor-pointer" onclick="toggleContentfour()">....Read More</span>
+            <div class="px-6 pt-4 pb-2 border-t border-b">
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-white"><i class="fa-sharp fa-regular fa-eye"></i>&nbsp;1,765</span>
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-white"><i class="fa-regular fa-comment fa-fade"></i>&nbsp;87</span>
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-white"><i class="fa-regular fa-heart fa-fade"></i>&nbsp;90</span>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- card 6 -->
+    <div class=" mx-auto w-full max-w-sm pt-6">
+        <div >
+        <div class="rounded">
+            <div class=" flex h-60 rounded-lg">
+            <div class="w-full">
+                <img src="images/img1.webp" alt="" />
+            </div>
+            </div>
+            <div class=" p-3">
+            <div class="mt-4 grid grid-cols-1">
+                <div class="flex items-center">
+                <div class=" text-center">
+                    <h2 class=" text-base font-medium text-gray-800 md:text-lg" title="">WHY VISIT DA NANG IN CENTRAL VIETNAM</h2>
+                    <p class="mt-2 line-clamp-1 text-sm text-gray-800" title="">by Parnashree Devi | Jul 13, 2023</p>
+                </div>
+                </div>
+            </div>
+            <p class="mt-2 border-t overflow-hidden max-h-28 border-gray-200 pt-3" id="card-content5">Planning a trip to Vietnam? Visit Da Nang’s Coastal Charms. Sun, Sand, and Cultural Delights in Central Vietnam should be on your list.
+                Da Nang is a must-see treasure located in Central Vietnam, encircled by the Eastern Sea’s crystal-clear waters and towering mountains on all sides. This coastal city provides a heady mix with its sun-drenched beaches, breathtaking cultural attractions, and exhilarating activities that appeal to all the senses. This tour of Da
+                 Nang’s tropical attractions reveals an engrossing story of a city caught between tradition and modernization.
+            </p>
+            <span class="read-more-btn5 font-thin cursor-pointer" onclick="toggleContentfive()">....Read More</span>
+            <div class="px-6 pt-4 pb-2 border-t border-b">
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-white"><i class="fa-sharp fa-regular fa-eye"></i>&nbsp;1,678</span>
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-white"><i class="fa-regular fa-comment fa-fade"></i>&nbsp;68</span>
+                <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 hover:bg-white"><i class="fa-regular fa-heart fa-fade"></i>&nbsp;48</span>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!-- blog card end -->
+
+        <!--Footer container-->
+<footer class="bg-gray-100 text-center dark:bg-gray-600">
+    <!--Sign-up form section-->
+    <div class="px-6 pt-6">
+      <form action="">
+        <div
+          class="gird-cols-1 grid items-center justify-center gap-4 md:grid-cols-3">
+          <div class="md:mb-6 md:ml-auto">
+            <p class="text-secondary-800 dark:text-secondary-200">
+              <strong>Sign up for our newblog</strong>
+            </p>
+          </div>
+  
+        <div class="relative md:mb-6" >
+            <input
+            type="text"
+            class="peer block min-h-[auto] w-full rounded border-2 outline-none bg-transparent px-3 py-[0.32rem] leading-[1.6] transition-all ease-linear"
+            id="exampleFormControlInput1"
+            placeholder="Email address" />
+            <label for="exampleFormControlInput1">
+            </label>
+        </div>
+  
+        <div class="mb-6 md:mr-auto">
+            <button
+            type="button"
+            class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 bg-orange-700 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+            data-te-ripple-init
+            data-te-ripple-color="light">
+            Subscribe
+            </button>
+        </div>
+        </div>
+      </form>
+    </div>
+  
+    <!--Copyright section-->
+    <div
+      class="bg-gray-200 p-4 text-center text-gray-700 dark:bg-gray-700 dark:text-gray-200">
+      © 2023 Copyright:
+      <a
+        class="text-gray-800 dark:text-gray-400"
+        href="#"
+        >Travel Blog <span>| made by megha deshmukh</span></a>
+    </div>
+  </footer>
+    <!-- footer end -->
+
+
+    <script type="text/javascript" src="script/javascript.js"></script>
+</body>
+</html>

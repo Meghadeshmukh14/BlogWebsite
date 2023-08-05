@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
+</head>
+<body>
+    <!-- navbar -->
+    <nav
+        class="fixed w-full flex items-center justify-between flex-wrap bg-white py-2 lg:px-12 shadow border-solid border-t-2 border-blue-700">
+        <div class="flex lg:w-auto w-full justify-between lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0">
+            <div class="flex items-center flex-shrink-0 text-gray-800 mr-16">
+                <span class=" tracking-tight">
+                    <img src="https://1000logos.net/wp-content/uploads/2020/08/Blogger-Logo.png" alt="" width="100">
+                </span>
+            </div>
+            <div class="block lg:hidden ">
+                <button
+                    id="nav"
+                    class="flex items-center px-3 py-2 my-3 border-2 rounded text-blue-700 border-blue-700 hover:text-blue-700 hover:border-blue-700">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    
+        <div class="menu w-full flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8" id="mobileMenu">
+            <div class="text-md font-bold text-gray-700 lg:flex-grow">
+                <a href="index.html" class="block mt-4 lg:inline-block lg:mt-0 px-4 py-2 hover:border-b-2 mr-2">
+                    Home
+                </a>
+                <a href="blog.html" class=" block mt-4 lg:inline-block lg:mt-0  px-4 py-2  hover:border-b-2 mr-2">
+                    Blog
+                </a>
+                <a href="about.html" class="block mt-4 lg:inline-block lg:mt-0  px-4 py-2  hover:border-b-2 mr-2">
+                    About
+                </a>
+                <a href="contact.html" class="block mt-4 lg:inline-block lg:mt-0  px-4 py-2 hover:border-b-2 mr-2">
+                    Contact
+                </a>
+            </div>
+            <!-- This is an example component -->
+            <div class="relative mx-auto text-gray-600 lg:block hidden">
+                <input
+                    class=" border-b-2 border-gray-300 bg-transparent h-10 pl-2 pr-8 text-sm focus:outline-none"
+                    type="search" name="search" placeholder="Search">
+                <button type="submit" class="absolute right-0 top-0 mt-3 mr-2">
+                    <svg class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
+                        version="1.1" id="Capa_1" x="0px" y="0px"
+                        viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;"
+                        xml:space="preserve"
+                        width="512px" height="512px">
+                <path
+                    d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"/>
+            </svg>
+                </button>
+            </div>
+            <div class="flex mx-6 ">
+                <a href="#" class="block text-md px-4 py-1 rounded-full text-gray-500 ml-1 font-bold hover:text-gray-600 mt-4 hover:bg-gray-200 lg:mt-0"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class=" block text-md px-4  ml-1 py-1 rounded-full text-gray-500 font-bold hover:text-gray-600 mt-4 hover:bg-gray-200 lg:mt-0"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class=" block text-md px-4  ml-1 py-1 rounded-full text-gray-500 font-bold hover:text-gray-600 mt-4 hover:bg-gray-200 lg:mt-0"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class=" block text-md px-4  ml-1 py-1 rounded-full text-gray-500 font-bold hover:text-gray-600 mt-4 hover:bg-gray-200 lg:mt-0"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </nav>
+    <!-- navbar end -->
+    <section>
+        <div class="w-full h-20 "></div>
+    </section>
+    <div class=" container my-10 justify-center max-w-screen-lg m-auto">
+        <div class=" text-2xl font-serif">Contact</div>
+        <div class=" border-b-4 w-28 border-rose-600"></div>
+    </div>
+
+    <!-- contact form section -->
+<div class="container my-10 mx-auto md:px-6">
+    <section class="mb-32">
+      <div
+        class=" h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat bg-[url('images/contact.webp')]">
+      </div>
+      <div class="container px-6 md:px-12">
+        <div
+          class="block rounded-lg bg-white px-6 py-12 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,5%,0.7)] dark:shadow-black/20 md:py-16 md:px-12 -mt-[70px]">
+          <div class="mb-12 grid gap-x-6 md:grid-cols-2 lg:grid-cols-4">
+            <div class="mx-auto mb-12 text-center lg:mb-0">
+                <i class="fa-solid fa-earth-americas mb-4"></i>
+                <h6 class="font-medium">Madhya Pradesh</h6>
+            </div>
+            <div class="mx-auto mb-12 text-center lg:mb-0">
+                <i class="fa-solid fa-location-dot mb-4"></i>
+                <h6 class="font-medium">bhopal , 462023</h6>
+            </div>
+            <div class="mx-auto mb-6 text-center md:mb-0">
+            <i class="fa-solid fa-phone mb-4"></i>
+              <h6 class="font-medium">+919171191101</h6>
+            </div>
+            <div class="mx-auto text-center">
+                <i class="fa-solid fa-camera mb-4"></i>
+              <h6 class="font-medium">ID: 2736 6384 6757</h6>
+            </div>
+          </div>
+          <div class="mx-auto max-w-[700px]">
+            <form>
+              <div class=" mb-6">
+                <input type="text"
+                  class=" block min-h-[auto] w-full rounded border-2 py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear "
+                  id="exampleInput90" placeholder="Name" />
+              </div>
+              <div class=" mb-6">
+                <input type="email"
+                  class=" block min-h-[auto] w-full rounded border-2 py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear "
+                  id="exampleInput91" placeholder="Email address" />
+              </div>
+              <div class=" mb-6">
+                <textarea
+                  class=" block min-h-[auto] w-full rounded border-2 py-[0.32rem] px-3 leading-[1.6] outline-none transition-all duration-200 ease-linear "
+                  id="exampleFormControlTextarea1" rows="3" placeholder="Your message"></textarea>
+                </div>
+              <div class="my-6 inline-block min-h-[1.5rem] justify-center pl-[1.5rem] md:flex">
+                <input
+                  class=" float-left mt-[0.15rem] mr-[6px] -ml-[1.5rem] h-[1.125rem] w-[1.125rem] rounded-[0.25rem] border-[0.125rem] border-solid border-neutral-300 outline-none]"
+                  type="checkbox" value="" id="exampleCheck96" checked />
+                <label class="inline-block pl-[0.15rem] hover:cursor-pointer" for="exampleCheck96">
+                  Send me a copy of this message
+                </label>
+              </div>
+              <button type="button" data-te-ripple-init data-te-ripple-color="light"
+                class="inline-block w-full rounded bg-primary px-6 pt-2.5 pb-2 text-md font-medium uppercase bg-orange-600">
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- contact form end -->
+
+  <!--Footer container-->
+<footer class="bg-gray-100 text-center dark:bg-gray-600">
+    <!--Sign-up form section-->
+    <div class="px-6 pt-6">
+      <form action="">
+        <div
+          class="gird-cols-1 grid items-center justify-center gap-4 md:grid-cols-3">
+          <div class="md:mb-6 md:ml-auto">
+            <p class="text-secondary-800 dark:text-secondary-200">
+              <strong>Sign up for our newblog</strong>
+            </p>
+          </div>
+  
+          <div class="relative md:mb-6" >
+            <input
+              type="text"
+              class="peer block min-h-[auto] w-full rounded border-2 outline-none bg-transparent px-3 py-[0.32rem] leading-[1.6] transition-all ease-linear"
+              id="exampleFormControlInput1"
+              placeholder="Email address" />
+            <label
+              for="exampleFormControlInput1"
+              >
+            </label>
+          </div>
+  
+          <div class="mb-6 md:mr-auto">
+            <button
+              type="button"
+              class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 bg-orange-700 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
+              data-te-ripple-init
+              data-te-ripple-color="light">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  
+    <!--Copyright section-->
+    <div
+      class="bg-gray-200 p-4 text-center text-gray-700 dark:bg-gray-700 dark:text-gray-200">
+      © 2023 Copyright:
+      <a
+        class="text-gray-800 dark:text-gray-400"
+        href="#"
+        >Travel Blog <span>| made by megha deshmukh</span></a>
+    </div>
+  </footer>
+    <!-- footer end -->
+
+
+
+    <script type="text/javascript" src="script/javascript.js"></script>
+</body>
+</html>
